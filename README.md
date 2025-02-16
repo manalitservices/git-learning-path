@@ -7,6 +7,7 @@
 #### Explanation
 Git is a version control system that helps developers track and manage changes in their codebase. At the beginner level, it's important to understand:
 - Initializing a repository
+- Cloning a repository
 - Adding and committing files
 - Checking the status of the repository
 - Viewing commit history
@@ -21,21 +22,24 @@ git config --global user.email "your_email@example.com"
 git init my_project
 cd my_project
 
-# Step 3: Create a file and add it to Git
+# Step 3: Clone an existing repository
+git clone https://github.com/user/repository.git
+
+# Step 4: Create a file and add it to Git
 echo "Hello Git" > file.txt
 git add file.txt
 
-# Step 4: Commit the changes
+# Step 5: Commit the changes
 git commit -m "Initial commit with file.txt"
 
-# Step 5: Check repository status
+# Step 6: Check repository status
 git status
 
-# Step 6: View commit history
+# Step 7: View commit history
 git log --oneline
 ```
 
-🔹 **Key Takeaways:** You now understand how to set up Git, track changes, and commit files.
+🔹 **Key Takeaways:** You now understand how to set up Git, clone repositories, track changes, and commit files.
 
 ---
 
@@ -74,7 +78,7 @@ git commit -m "Resolved merge conflict"
 
 ---
 
-## Advanced Level: Git Rebase, Cherry-Pick, and Stashing
+## Advanced Level: Git Rebase, Cherry-Pick, Stashing, Cloning, and Amending Commits
 
 ### Topic: Rewriting Git History with Rebase
 
@@ -142,13 +146,47 @@ git stash apply
 git stash drop
 ```
 
-🔹 **Key Takeaways:** You now know how to rewrite commit history using rebase, apply specific commits with cherry-pick, and stash changes for later use.
+### Topic: Cloning a Repository
+
+#### Explanation
+Cloning allows you to create a local copy of a remote repository. This is essential when working with existing projects.
+
+#### Example Commands
+```bash
+# Step 1: Clone a repository
+git clone https://github.com/user/repository.git
+
+# Step 2: Change into the repository directory
+cd repository
+
+# Step 3: View remote repository details
+git remote -v
+```
+
+### Topic: Amending Commits
+
+#### Explanation
+Sometimes you need to modify your last commit, either to update the commit message or add more changes.
+
+#### Example Commands
+```bash
+# Step 1: Modify the last commit message
+git commit --amend -m "Updated commit message"
+
+# Step 2: Add changes and amend the last commit
+echo "Another change" >> file.txt
+git add file.txt
+git commit --amend --no-edit
+```
+> **Note:** If the commit has already been pushed, use `git push --force` to update the remote repository.
+
+🔹 **Key Takeaways:** You now know how to rewrite commit history using rebase, apply specific commits with cherry-pick, stash changes for later use, clone repositories, and amend commits.
 
 ---
 
 ## Conclusion
-- **Beginner:** Set up Git, track files, and commit changes.
+- **Beginner:** Set up Git, clone repositories, track files, and commit changes.
 - **Intermediate:** Use branching, merging, and resolve conflicts.
-- **Advanced:** Rebase commits for a cleaner history, cherry-pick commits, and stash changes temporarily.
+- **Advanced:** Rebase commits for a cleaner history, cherry-pick commits, stash changes temporarily, clone repositories, and amend commits.
 
 Would you like a hands-on activity for each level? 🚀
