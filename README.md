@@ -74,7 +74,7 @@ git commit -m "Resolved merge conflict"
 
 ---
 
-## Advanced Level: Git Rebase and Interactive Rebase
+## Advanced Level: Git Rebase, Cherry-Pick, and Stashing
 
 ### Topic: Rewriting Git History with Rebase
 
@@ -108,13 +108,47 @@ After saving, Git will ask for a new commit message.
 git push origin main --force
 ```
 
-🔹 **Key Takeaways:** You now know how to rewrite commit history using rebase, squash commits, and force push when necessary.
+### Topic: Cherry-Picking Commits
+
+#### Explanation
+Cherry-picking allows you to apply a specific commit from one branch into another without merging the entire branch.
+
+#### Example Commands
+```bash
+# Step 1: Identify the commit hash
+git log --oneline
+
+# Step 2: Cherry-pick the desired commit
+git cherry-pick <commit-hash>
+```
+
+### Topic: Stashing Changes
+
+#### Explanation
+Stashing allows you to save changes temporarily without committing them. This is useful when switching branches without losing changes.
+
+#### Example Commands
+```bash
+# Step 1: Stash uncommitted changes
+git stash
+
+# Step 2: View stash list
+git stash list
+
+# Step 3: Apply the latest stash
+git stash apply
+
+# Step 4: Drop a stash after applying
+git stash drop
+```
+
+🔹 **Key Takeaways:** You now know how to rewrite commit history using rebase, apply specific commits with cherry-pick, and stash changes for later use.
 
 ---
 
 ## Conclusion
 - **Beginner:** Set up Git, track files, and commit changes.
 - **Intermediate:** Use branching, merging, and resolve conflicts.
-- **Advanced:** Rebase commits for a cleaner history.
+- **Advanced:** Rebase commits for a cleaner history, cherry-pick commits, and stash changes temporarily.
 
 Would you like a hands-on activity for each level? 🚀
